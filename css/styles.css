@@ -1,0 +1,95 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Angelo M*/
+.navbar {
+
+}
+
+.navbar a {
+
+}
+
+.navbar a:hover {
+
+}
+
+.navbar .menu {
+
+}
+
+
+.hero {
+
+}
+
+.content, .cards, .video {
+
+}
+
+.card {
+
+}
+
+.card img {
+
+}
+
+.accordion {
+
+}
+
+.accordion-item {
+
+}
+
+.accordion-header {
+
+}
+
+.accordion-body {
+
+}
+
+footer {
+
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        padding: 50px 10px;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .accordion-header {
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+
+    .navbar .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar a {
+        margin: 5px 0;
+    }
+}

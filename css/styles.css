@@ -24,7 +24,35 @@ body {
 
 
 .hero {
+    background: url(https://images.unsplash.com/photo-1558060370-d644479cb6f7?q=80&w=1856&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding: 175px 20px;
+    color: #333;
+}
 
+.herotext {
+    background: rgba(255, 255, 255); 
+    padding: 50px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+.herobutton {
+    text-decoration: none;
+    color: orangered;
+    background: white;
+    border: 2px solid orangered;
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 20px;
 }
 
 .content, .cards, .video {

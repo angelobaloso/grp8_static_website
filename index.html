@@ -6,13 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToyStore</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome link -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
+    <!-- NavBar -->
+     <nav class="navbar">
+        <div class="logo">
+        <a href="#"><img src="images/ta_logo.svg" class="logo"></a>
+        </div>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="icons">
+            <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            <a href="#"><i class="fas fa-user"></i></a>
+        </div>
+        <div class="burger" id="burger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+        <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="#" class="active">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#"><i class="fas fa-shopping-cart"></i> Cart</a>
+            <a href="#"><i class="fas fa-user"></i> Login</a>
+        </div>
+    </div>
+
     <!-- Hero Banner -->
     <header>
         <div class="hero">
+            <div class="herotext">
+            <h1>HI THERE!</h1>
+            <p>Take a stroll down The Toy Aisle, and I'll guarantee you won't regret it!</p>
+            <a href="#" class="herobutton">Shop Now</a>
+            </div>
         </div>
     </header>
 
@@ -32,35 +74,6 @@
         </section>
 
         <!-- Accordion Section -->
-        <section class="accordion">
-            <div class="accordion-container">
-                <div class="faq-container">
-                    <div class="faq-info">
-                        <h1>Frequently Asked Questions</h1>
-                        <div class="faq-items">
-                            <div class="faq-item">
-                                <div class="faq-item-header">
-                                    <h3>Product return policy</h3>
-                                    <span class="faq-toggler">+</span>
-                                </div>
-                                <div class="faq-item-body">30 day return policy</div>
-                            </div>
-                            <div class="faq-item">
-                                <div class="faq-item-header">
-                                    <h3>Shipping & Delivery</h3>
-                                    <span class="faq-toggler">+</span>
-                                </div>
-                                <div class="faq-item-body">1-3 days to deliver the toys</div>
-                            </div>
-                            <div class="faq-item">
-                                <div class="faq-item-header">
-                                    <h3>Payment Options</h3>
-                                    <span class="faq-toggler">+</span>
-                                </div>
-                                <div class="faq-item-body">Cash, Credit Card and Debit card</div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -68,8 +81,28 @@
 
     <!-- Footer -->
     <footer>
+            <div class ="footer-content">
+                <div class="socialicons">
+                    <a href=""><i class='fa-brands fa-facebook'></i></a>
+                    <a href=""><i class='fa-brands fa-instagram'></i></a>
+                    <a href=""><i class='fa-brands fa-youtube'></i></a>
+                    <a href=""><i class='fa-brands fa-tiktok'></i></a> 
+                    <a href=""><i class='fa-brands fa-google-plus'></i></a> 
+                </div>
+            <div class="footer-Nav">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Our Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-Bottom">
+                <p>Copyright &copy; 2024</p>
+            </div>     
     </footer>
     <script src="js/accordion.js"></script>
+    <script src="js/burgerMenu.js"></script>
 </body>
 
 </html>

@@ -7,50 +7,76 @@ body {
 
 /*Angelo M*/
 .navbar {
-    position: fixed;
-    top: 0;
-    background-color: white;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-.logo img{
+.navbar .logo img {
     height: 50px;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
 }
 
 .navbar ul {
     display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
     flex-grow: 1;
     justify-content: center;
-    margin: 0 auto;
+    align-items: center; /* Align items in the center */
     max-width: 600px;
-    padding: 0;
-    list-style-type: none;
-    float: left;
+    font-size: 18px;
 }
 
 .navbar ul li {
     margin: 0 15px;
+    position: relative;
 }
 
 .navbar ul li a {
     text-decoration: none;
-    color: rgb(31, 31, 31);
+    color: #14223E; /* Inactive text color */
+    font-weight: bold;
+    font-size: 16px;
+    padding-bottom: 5px;
 }
 
-.navbar ul li a:hover,
+.navbar ul li a:hover::after,
+.navbar ul li a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #EF3B3B;
+    transform: translateY(5px);
+}
+
 .navbar ul li a.active {
-    color: #f24313;
+    color: #EF3B3B;
+}
+
+.navbar ul li a:hover {
+    color: #EF3B3B;
 }
 
 .navbar .icons {
     display: flex;
     align-items: center;
-    padding-right: 40px;
+    padding: 40px;
 }
 
 .navbar .icons a {
@@ -61,13 +87,13 @@ body {
 }
 
 .navbar .icons a:hover {
-    color: #f24313;
+    color: #EF3B3B;
 }
 
 .burger {
     display: none;
     cursor: pointer;
-    padding-right: 40px;
+    padding: 40px;
 }
 
 .burger div {
@@ -83,7 +109,7 @@ body {
     position: fixed;
     top: 0;
     right: -100%;
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.9);
     overflow-x: hidden;
     transition: right 0.5s;
     z-index: 999;
@@ -108,7 +134,7 @@ body {
 
 .overlay-content a:hover,
 .overlay-content a.active {
-    color: #f24313;
+    color: #EF3B3B;
 }
 
 .overlay .closebtn {
@@ -116,8 +142,9 @@ body {
     top: 20px;
     right: 45px;
     font-size: 60px;
-    color: black;
+    color: white;
 }
+
 
 .hero {}
 

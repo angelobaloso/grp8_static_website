@@ -9,98 +9,135 @@ body {
 .navbar {
     position: fixed;
     top: 0;
-    left: 0px;
-    height: 150px;
-    background-color: rgb(249, 249, 249);
+    background-color: white;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+}
+
+.logo img{
+    height: 50px;
 }
 
 .navbar ul {
-    margin: 0;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 600px;
     padding: 0;
     list-style-type: none;
     float: left;
 }
 
 .navbar ul li {
-    margin: 0;
-    float: left;
+    margin: 0 15px;
 }
 
 .navbar ul li a {
     text-decoration: none;
-    padding: 10px 40px;
-    display: block;
+    color: rgb(31, 31, 31);
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    color: #f24313;
+}
+
+.navbar .icons {
+    display: flex;
+    align-items: center;
+    padding-right: 40px;
+}
+
+.navbar .icons a {
+    color: #555;
+    margin: 0 10px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.navbar .icons a:hover {
+    color: #f24313;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    padding-right: 40px;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: white;
+    overflow-x: hidden;
+    transition: right 0.5s;
+    z-index: 999;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
     text-align: center;
+    margin-top: 30px;
+}
+
+.overlay-content a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay-content a:hover,
+.overlay-content a.active {
+    color: #f24313;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
     color: black;
 }
 
-.navbar a:hover {
-    color: blue;
-}
+.hero {}
 
-.navbar .menu {
-    display: flex;
-}
+.content,
+.cards,
+.video {}
 
-.LogIn {
-    background-color: rgb(249, 249, 249);
-    border: none;
-    color: blue;
-    padding: 20px 35px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-}
+.card {}
 
-.logo{
-    padding: 40px;
-}
+.card img {}
 
-.navbar ul li .active{
-    color: orangered;
-}
+.accordion {}
 
-.hero {
+.accordion-item {}
 
-}
+.accordion-header {}
 
-.content, .cards, .video {
+.accordion-body {}
 
-}
-
-.card {
-
-}
-
-.card img {
-
-}
-
-.accordion {
-
-}
-
-.accordion-item {
-
-}
-
-.accordion-header {
-
-}
-
-.accordion-body {
-
-}
-
-footer {
-
-}
+footer {}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -127,12 +164,22 @@ footer {
         font-size: 14px;
     }
 
-    .navbar .menu {
-        flex-direction: column;
-        align-items: center;
+    .navbar ul {
+        display: none;
     }
 
-    .navbar a {
-        margin: 5px 0;
+    .burger {
+        display: block;
     }
+
+    .navbar .icons {
+        display: none;
+    }
+}
+.overlay.show {
+    right: 0;
+}
+
+body {
+    padding-top: 80px;
 }

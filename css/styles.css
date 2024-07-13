@@ -111,71 +111,9 @@ body {
 
 }
 
-/* Accordion */
-.hidden {
-    display: none;
-=======
 
 /*Frian*/
-.accordion {
 
-}
-
-.accordion-container {
-    display: flex;
-    justify-content: center;
-    padding: 6rem 4rem;
-}
-.faq-container {
-    display: flex;
-}
-.faq-info {
-    width: 50%;
-}
-h1 {
-    margin-bottom: 2rem;
-}
-
-.faq-item{
-}
-.faq-item-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-    background: #ebd3c6;
-    color: #111;
-    padding: 0.4rem 0.8rem;
-    font-size: 0.8rem;
-}
-h3 {
-    opacity: 0.6;
-}
-.faq-toggler {
-    background: none;
-    border: none;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #f24313;
-    cursor: pointer;
-}
-.faq-item-body {
-    padding: 0 1rem 1rem 1rem;
-    color: #111;
-    opacity: 0.7;
-}
-@media screen and (max-width: 800px) {
-    .faq-container {
-        flex-direction: column-reverse;        
-    }
-    .faq-info{
-        width: 100%;
-    }
-    
-    h1 {
-        text-align: center;
-    }
-}
 /* Footer */
 *{
     padding: 0;
@@ -238,7 +176,7 @@ footer{
     color: white;
 }
 
-@media (max-width 700px){
+@media (max-width: 700px){
     .footer-Nav ul{
         flex-direction: column;
     }

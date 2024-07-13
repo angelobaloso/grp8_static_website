@@ -86,23 +86,6 @@ body {
     text-decoration: none;
 }
 
-.navbar .icons a:hover {
-    color: #EF3B3B;
-}
-
-.burger {
-    display: none;
-    cursor: pointer;
-    padding: 40px;
-}
-
-.burger div {
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    margin: 5px;
-}
-
 .overlay {
     height: 100%;
     width: 100%;
@@ -146,25 +129,7 @@ body {
 }
 
 
-.hero {}
-
-.content,
-.cards,
-.video {}
-
 .card {}
-
-.card img {}
-
-.accordion {}
-
-.accordion-item {}
-
-.accordion-header {}
-
-.accordion-body {}
-
-footer {}
 
 /* Responsive Design */
 @media (max-width: 768px) {

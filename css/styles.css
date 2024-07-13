@@ -7,247 +7,129 @@ body {
 
 /*Angelo M*/
 .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
-    left: 0px;
-    height: 150px;
-    background-color: rgb(249, 249, 249);
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    z-index: 1000;
+}
+
+.navbar .logo img {
+    height: 50px;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
 }
 
 .navbar ul {
-    margin: 0;
+    display: flex;
+    list-style: none;
     padding: 0;
-    list-style-type: none;
-    float: left;
+    margin: 0 auto;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center; /* Align items in the center */
+    max-width: 600px;
+    font-size: 18px;
 }
 
 .navbar ul li {
-    margin: 0;
-    float: left;
+    margin: 0 15px;
+    position: relative;
 }
 
 .navbar ul li a {
     text-decoration: none;
-    padding: 10px 40px;
-    display: block;
-    text-align: center;
-    color: black;
-}
-
-.navbar a:hover {
-    color: blue;
-}
-
-.navbar .menu {
-    display: flex;
-}
-
-.LogIn {
-    background-color: rgb(249, 249, 249);
-    border: none;
-    color: blue;
-    padding: 20px 35px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
+    color: #14223E; /* Inactive text color */
+    font-weight: bold;
     font-size: 16px;
-    cursor: pointer;
+    padding-bottom: 5px;
 }
 
-.logo{
+.navbar ul li a:hover::after,
+.navbar ul li a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #EF3B3B;
+    transform: translateY(5px);
+}
+
+.navbar ul li a.active {
+    color: #EF3B3B;
+}
+
+.navbar ul li a:hover {
+    color: #EF3B3B;
+}
+
+.navbar .icons {
+    display: flex;
+    align-items: center;
     padding: 40px;
 }
 
-.navbar ul li .active{
-    color: orangered;
-}
-
-.hero {
-    background: url(https://images.unsplash.com/photo-1558060370-d644479cb6f7?q=80&w=1856&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat;
-    background-size: cover;
-    text-align: center;
-    padding: 175px 20px;
-    color: #333;
-}
-
-.herotext {
-    background: rgba(255, 255, 255); 
-    padding: 50px;
-    border-radius: 10px;
-    display: inline-block;
-    margin-bottom: 20px;
-}
-
-.hero h1 {
-    margin: 0;
-    font-size: 3em;
-}
-
-.herobutton {
+.navbar .icons a {
+    color: #555;
+    margin: 0 10px;
+    font-size: 18px;
     text-decoration: none;
-    color: orangered;
-    background: white;
-    border: 2px solid orangered;
-    border-radius: 5px;
-    padding: 10px 20px;
-    display: inline-block;
-    margin-top: 20px;
 }
 
-/*Angelo B*/
-.content, .cards, .video {
-
-}
-
-.card {
-
-}
-
-.card img {
-
-}
-
-/* Accordion */
-.hidden {
-    display: none;
-}
-
-/*Frian*/
-.accordion {
-
-}
-
-.accordion-container {
-    display: flex;
-    justify-content: center;
-    padding: 6rem 4rem;
-}
-.faq-container {
-    display: flex;
-}
-.faq-info {
-    width: 50%;
-}
-h1 {
-    margin-bottom: 2rem;
-}
-
-.faq-item{
-}
-.faq-item-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-    background: #ebd3c6;
-    color: #111;
-    padding: 0.4rem 0.8rem;
-    font-size: 0.8rem;
-}
-h3 {
-    opacity: 0.6;
-}
-.faq-toggler {
-    background: none;
-    border: none;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #f24313;
-    cursor: pointer;
-}
-.faq-item-body {
-    padding: 0 1rem 1rem 1rem;
-    color: #111;
-    opacity: 0.7;
-}
-@media screen and (max-width: 800px) {
-    .faq-container {
-        flex-direction: column-reverse;        
-    }
-    .faq-info{
-        width: 100%;
-    }
-    
-    h1 {
-        text-align: center;
-    }
-}
-/* Footer */
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-footer{
-    background-color: #f24313;
-}
-.footer-content{
+.overlay {
+    height: 100%;
     width: 100%;
-    padding: 70px 30px 20px;
-}
-.socialicons{
-    display: flex;
-    justify-content: center;
-}
-.socialicons a{
-    text-decoration: none;
-    padding: 10px;
-    background-color: white;
-    margin: 10px;
-    border-radius: 50%;
-}
-.socialicons a i{
-    font-size: 2em;
-    color: black;
-    opacity: 0.9;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: right 0.5s;
+    z-index: 999;
 }
 
-/* Hover Effects on Social Media Icons */
-.socialicons a:hover{
-    background-color: #111;
-    transition: 0.5s;
-}
-.footer-Nav {
-    margin: 3opx 0;
-}
-.footer-Nav ul{
-    display: flex;
-    justify-content: center;
-}
-.footer-Nav ul li a{
-    color: white;
-    margin: 20px;
-    text-decoration: none;
-    font-size: 1.3em;
-    opacity: 0.7;
-    transition: 0.5s;
-}
-.footer-Nav ul li a:hover {
-    opacity: 1;
-}
-.footer-Bottom{
-    background-color: #f24313;
-    padding: 20px;
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
     text-align: center;
+    margin-top: 30px;
 }
-.footer-Bottom p{
+
+.overlay-content a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay-content a:hover,
+.overlay-content a.active {
+    color: #EF3B3B;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
     color: white;
 }
 
-@media (max-width: 700px){
-    .footer-Nav ul{
-        flex-direction: column;
-    }
-    .footer-Nav ul li{
-        width: 100%;
-        text-align: center;
-        margin: 10px;
-    }
-}
+
+.card {}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -274,12 +156,22 @@ footer{
         font-size: 14px;
     }
 
-    .navbar .menu {
-        flex-direction: column;
-        align-items: center;
+    .navbar ul {
+        display: none;
     }
 
-    .navbar a {
-        margin: 5px 0;
+    .burger {
+        display: block;
     }
+
+    .navbar .icons {
+        display: none;
+    }
+}
+.overlay.show {
+    right: 0;
+}
+
+body {
+    padding-top: 80px;
 }

@@ -58,9 +58,14 @@
 
     <!-- Content Section -->
     <main>
-        <div class="collection-title">
+        <section class="content">
+        </section>
+
+        <!-- Collection Title -->
+        <section class="collection-title">
             <h1>Our Collection</h1>
-        </div>
+        </section>
+
         <!-- Card Section -->
         <section class="cards">
             <div class="card-wrapper swiper">
@@ -112,9 +117,10 @@
                     <p>This is a short description of the video.</p>
                 </div>
                 <div class="video-frame">
-                    <video id="videoPlayer" src="video.mp4" controls></video>
-                    <button id="playButton">Play</button>
-                    <button id="pauseButton">Pause</button>
+                    <video id="videoPlayer" class="responsive-video" controls>
+                        <source src="videos/video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
         </section>

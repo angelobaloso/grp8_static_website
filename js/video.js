@@ -1,15 +1,15 @@
-const playButton = document.getElementById('playButton');
-const pauseButton = document.getElementById('pauseButton');
-const videoPlayer = document.getElementById('videoPlayer');
+document.addEventListener('DOMContentLoaded', function () {
+    var videoPlayer = document.getElementById('videoPlayer');
+    var playButton = document.getElementById('playButton');
+    var pauseButton = document.getElementById('pauseButton');
 
-playButton.addEventListener('click', () => {
-    videoPlayer.play();
+    if (videoPlayer && playButton && pauseButton) {
+        playButton.addEventListener('click', function () {
+            videoPlayer.play();
+        });
+
+        pauseButton.addEventListener('click', function () {
+            videoPlayer.pause();
+        });
+    }
 });
-
-pauseButton.addEventListener('click', () => {
-    videoPlayer.pause();
-});
-
-function closeNav() {
-    overlayNav.classList.remove('show');
-}

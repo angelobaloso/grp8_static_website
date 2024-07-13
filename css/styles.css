@@ -234,48 +234,44 @@ body {
 }
 
 /*Video Section*/
-.video {
-    display: flex;
-    justify-content: center;
-    padding: 50px 20px;
-}
-
 .video-container {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: auto;
     width: 100%;
-    max-width: 1920px;
-    padding: 0 80px;
+    max-width: 1200px;
+    padding: 80px 20px;
     box-sizing: border-box;
+    margin: 0 auto; 
 }
 
+
 .video-description {
-    max-width: 300px;
+    text-align: left; 
+    max-width: 30%; 
+}
+
+.video-description h2 {
+    font-size: 60px; 
+    margin: 0;
+    color: #14223E;
 }
 
 .video-frame {
     position: relative;
-    flex-grow: 1;
+    width: 80%; 
 }
 
 .video-frame video {
     width: 100%;
+    height: auto;
     border-radius: 10px;
 }
 
-.video-frame button {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
+.responsive-video {
+    width: 100%;
+    height: auto;
 }
-
 /*Accordion*/
 .accordion-container {
     display: flex;
@@ -445,18 +441,15 @@ footer {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
-        /* Hide scrollbar for Firefox */
     }
 
     .card-wrapper::-webkit-scrollbar {
         display: none;
-        /* Hide scrollbar for Chrome, Safari, and Opera */
     }
 
     .card {
         flex: 0 0 auto;
         width: 70%;
-        /* Adjust the width for better fit in mobile view */
         margin: 0 10px;
     }
 
@@ -478,7 +471,13 @@ footer {
     }
 
     .video-description {
+        text-align: center;
+        max-width: 100%;
         margin-bottom: 20px;
+    }
+
+    .video-frame {
+        width: 100%;
     }
 }
 

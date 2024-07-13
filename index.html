@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToyStore</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Toy Aisle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.0/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" href="images/ta_fav.svg" type="image/svg+xml">
 </head>
 
 <body>
@@ -57,17 +58,65 @@
 
     <!-- Content Section -->
     <main>
-        <section class="content">
-        </section>
-
+        <div class="collection-title">
+            <h1>Our Collection</h1>
+        </div>
         <!-- Card Section -->
         <section class="cards">
-            <div class="card">
+            <div class="card-wrapper swiper">
+                <div class="swiper-wrapper">
+                    <div class="card swiper-slide">
+                        <img src="images/toy1.jpg" alt="Toy 1">
+                        <h3>Toy 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus fugiat aperiam tempore,
+                            minus pariatur.</p>
+                        <button>Buy Now</button>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img src="images/toy2.jpg" alt="Toy 2">
+                        <h3>Toy 2</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus fugiat aperiam tempore,
+                            minus pariatur.</p>
+                        <button>Buy Now</button>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img src="images/toy3.jpg" alt="Toy 3">
+                        <h3>Toy 3</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus fugiat aperiam tempore,
+                            minus pariatur.</p>
+                        <button>Buy Now</button>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img src="images/toy4.jpg" alt="Toy 4">
+                        <h3>Toy 4</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus fugiat aperiam tempore,
+                            minus pariatur.</p>
+                        <button>Buy Now</button>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img src="images/toy5.jpg" alt="Toy 5">
+                        <h3>Toy 5</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus fugiat aperiam tempore,
+                            minus pariatur.</p>
+                        <button>Buy Now</button>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Embedded Video -->
         <section class="video">
+            <div class="video-container">
+                <div class="video-description">
+                    <h2>Video Title</h2>
+                    <p>This is a short description of the video.</p>
+                </div>
+                <div class="video-frame">
+                    <video id="videoPlayer" src="video.mp4" controls></video>
+                    <button id="playButton">Play</button>
+                    <button id="pauseButton">Pause</button>
+                </div>
+            </div>
         </section>
 
         <!-- Accordion Section -->
@@ -111,6 +160,9 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -149,8 +201,11 @@
             <p>© 2024 Toy Aisle</p>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.0/swiper-bundle.min.js"></script>
     <script src="js/accordion.js"></script>
     <script src="js/burgerMenu.js"></script>
+    <script src="js/video.js"></script>
+    <script src="js/swiper.js"></script>
 </body>
 
 </html>

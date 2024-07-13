@@ -1,5 +1,5 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,23 +16,16 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 2000;
 }
 
 .navbar .logo img {
     height: 50px;
 }
 
-.logo-img {
-    height: 50px;
-    width: auto;
-}
-
 .navbar ul {
     display: flex;
     list-style: none;
-    padding: 0;
-    margin: 0 auto;
     flex-grow: 1;
     justify-content: center;
     align-items: center;
@@ -95,7 +88,7 @@ body {
     background-color: rgba(0, 0, 0, 0.9);
     overflow-x: hidden;
     transition: right 0.5s;
-    z-index: 999;
+    z-index: 1001;
 }
 
 .overlay-content {
@@ -173,6 +166,116 @@ body {
     display: inline-block;
     margin-top: 20px;
 }
+
+/*Card Section*/
+.collection-title {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.collection-title h1 {
+    font-size: 60px;
+    color: #14223E;
+}
+.cards {
+    padding: 0px 20px 50px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.card-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 250px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    margin: 10px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.card p {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.card button {
+    background-color: #EF3B3B;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.card button:hover {
+    background-color: #D12C2C;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/*Video Section*/
+.video {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+.video-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1920px;
+    padding: 0 80px;
+    box-sizing: border-box;
+}
+
+.video-description {
+    max-width: 300px;
+}
+
+.video-frame {
+    position: relative;
+    flex-grow: 1;
+}
+
+.video-frame video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.video-frame button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
 /*Accordion*/
 .accordion-container {
     display: flex;
@@ -331,32 +434,30 @@ footer {
     .contact-us {
         margin: 20px 0;
     }
-}
 
-
-/* Responsive Design */
-@media (max-width: 768px) {
     .hero {
         padding: 50px 10px;
     }
 
-    .cards {
+    .card-wrapper {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        /* Hide scrollbar for Firefox */
+    }
+
+    .card-wrapper::-webkit-scrollbar {
+        display: none;
+        /* Hide scrollbar for Chrome, Safari, and Opera */
     }
 
     .card {
-        width: 100%;
-        max-width: 300px;
-    }
-
-    .accordion-header {
-        font-size: 14px;
-    }
-
-    footer {
-        font-size: 14px;
+        flex: 0 0 auto;
+        width: 70%;
+        /* Adjust the width for better fit in mobile view */
+        margin: 0 10px;
     }
 
     .navbar ul {
@@ -369,6 +470,15 @@ footer {
 
     .navbar .icons {
         display: none;
+    }
+
+    .video-container {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .video-description {
+        margin-bottom: 20px;
     }
 }
 

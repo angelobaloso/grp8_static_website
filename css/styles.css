@@ -5,7 +5,6 @@ body {
     box-sizing: border-box;
 }
 
-/*Angelo M*/
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -35,7 +34,7 @@ body {
     margin: 0 auto;
     flex-grow: 1;
     justify-content: center;
-    align-items: center; /* Align items in the center */
+    align-items: center;
     max-width: 600px;
     font-size: 18px;
 }
@@ -47,7 +46,7 @@ body {
 
 .navbar ul li a {
     text-decoration: none;
-    color: #14223E; /* Inactive text color */
+    color: #14223E;
     font-weight: bold;
     font-size: 16px;
     padding-bottom: 5px;
@@ -139,6 +138,104 @@ body {
     background-color: #333;
     margin: 5px;
 }
+
+footer {
+    color: #ffffff;
+}
+
+.footer-content {
+    background-color: #14223E;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-bottom {
+    background-color: #EF3B3B;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.about-us {
+    width: 30%;
+    min-width: 250px;
+}
+
+.about-us h2 {
+    margin: 0;
+}
+
+.about-us p {
+    margin-top: 5px;
+}
+
+.quick-links-contact {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.quick-links, .contact-us {
+    min-width: 150px;
+}
+
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-links ul li {
+    margin: 5px 0;
+}
+
+.quick-links ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.contact-us {
+    margin-left: 20px;
+}
+
+.contact-us h2 {
+    margin: 0;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-icons a {
+    color: #ffffff;
+    margin-right: 10px;
+    font-size: 26px;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .quick-links-contact {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-us {
+        margin: 20px 0;
+    }
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero {

@@ -47,8 +47,7 @@ body {
 
 .navbar ul li a {
     text-decoration: none;
-
-
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero {

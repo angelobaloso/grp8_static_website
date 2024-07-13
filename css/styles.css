@@ -69,65 +69,6 @@ body {
     color: #EF3B3B;
 }
 
-.navbar ul li a:hover {
-    color: #EF3B3B;
-}
-
-.navbar .icons {
-    display: flex;
-    align-items: center;
-    padding: 40px;
-}
-
-.navbar .icons a {
-    color: #555;
-    margin: 0 10px;
-    font-size: 18px;
-    text-decoration: none;
-}
-
-.overlay {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    right: -100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    overflow-x: hidden;
-    transition: right 0.5s;
-    z-index: 999;
-}
-
-.overlay-content {
-    position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
-}
-
-.overlay-content a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-.overlay-content a:hover,
-.overlay-content a.active {
-    color: #EF3B3B;
-}
-
-.overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-    color: white;
-}
-
 
 .card {}
 
